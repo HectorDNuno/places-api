@@ -14,7 +14,12 @@ class PlacesController < ApplicationController
     place.name = params[:name] || place.name
     place.address = params[:address] || place.address
     place.save
-    render json: place
+
+    if place.save
+      render json: place
+    else
+      render json: { errors: place.errors.full_messages }, status: 422
+    end
   end
 
   def create
@@ -23,7 +28,12 @@ class PlacesController < ApplicationController
       address: params[:address],
     )
     place.save
-    render json: place
+
+    if place.save
+      render json: place
+    else
+      render json: { errors: place.errors.full_messages }, status: 422
+    end
   end
 
   def destroy
