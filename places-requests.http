@@ -15,3 +15,6 @@ Content-Type: application/json
   "name": "Joshua Tree National Park",
   "address": "Joshua Tree, CA"
 }
+
+### delete place
+DELETE http://localhost:3000/places/3

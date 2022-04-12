@@ -25,4 +25,10 @@ class PlacesController < ApplicationController
     place.save
     render json: place
   end
+
+  def destroy
+    place = Place.find(params[:id])
+    place.destroy
+    render json: { message: "Place removed!" }
+  end
 end
