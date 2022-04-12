@@ -10,3 +10,8 @@ Content-Type: application/json
 ### create place
 POST http://localhost:3000/places
 Content-Type: application/json
+
+{
+  "name": "Joshua Tree National Park",
+  "address": "Joshua Tree, CA"
+}

@@ -16,4 +16,13 @@ class PlacesController < ApplicationController
     place.save
     render json: place
   end
+
+  def create
+    place = Place.new(
+      name: params[:name],
+      address: params[:address],
+    )
+    place.save
+    render json: place
+  end
 end
