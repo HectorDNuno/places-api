@@ -1,0 +1,12 @@
+### update place
+PATCH http://localhost:3000/places/3
+Content-Type: application/json
+
+{
+  "name": "Disneyland",
+  "address": "Anaheim, CA"
+}
+
+### create place
+POST http://localhost:3000/places
+Content-Type: application/json
